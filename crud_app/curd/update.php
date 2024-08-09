@@ -1,4 +1,4 @@
-<?php include('dbcon.php');  ?>
+<?php include('../config/dbcon.php');  ?>
 
 
 <!DOCTYPE html>
@@ -67,7 +67,7 @@
             die("query Failed".mysqli_error($con));
          }
          else{
-            header("Location:index.php?update_msg=Succesfully_updated_the_data");  //dont forget it 
+            header("Location:../index.php?update_msg=Succesfully_updated_the_data");  //dont forget it 
       }
 
          }

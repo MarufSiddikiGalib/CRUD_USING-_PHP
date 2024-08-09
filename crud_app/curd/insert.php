@@ -1,6 +1,5 @@
-<?php include('dbcon.php');  ?>
-
 <?php 
+include('../config/dbcon.php');  
 
 if (isset($_POST['add_student'])){
 
@@ -12,7 +11,7 @@ if (isset($_POST['add_student'])){
     if($fname == "" || empty($fname)){
 
         $message = urlencode("INSERT FIRST NAME");
-        header('Location: index.php?message=' . $message);
+        header('Location: ../index.php?message=' . $message);
         exit;
             
         }
@@ -32,7 +31,7 @@ else{
      else{
 
         $message = urlencode("DATA ADDED SUCCESSFULL");
-        header('Location: index.php?message=' . $message);
+        header('Location:../index.php?message=' . $message);
         exit;
      }
 }

@@ -15,20 +15,15 @@
     }
     
     if (!defined('PASSWORD')) {
-        define('PASSWORD', ''); // Replace with your actual database password
+        define('PASSWORD', 'root'); // Replace with your actual database password
     }
     
     if (!defined('DATABASE')) {
         define('DATABASE', 'crud_operations'); // Replace with your actual database name
     }
 
-      $con = mysqli_connect(HOSTNAME, USERNAME, PASSWORD, DATABASE);
+      $con = mysqli_connect('127.0.0.1', USERNAME, PASSWORD, DATABASE,3306);
 
     if(!$con){
         die("Connection failed");
     }
-
-    else{
-        echo "Connection Ok";
-    }
-?>

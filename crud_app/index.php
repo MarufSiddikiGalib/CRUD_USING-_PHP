@@ -1,5 +1,6 @@
-<?php include('dbcon.php');  ?>
-<?php include('insert.php');  ?>
+
+<?php include('config/dbcon.php');  ?>
+<?php include('curd/insert.php');  ?>
 
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -60,8 +61,8 @@
                 <td> <?php echo $row['first_name']; ?> </td>
                 <td> <?php echo $row['last_name']; ?> </td>
                 <td> <?php echo $row['age']; ?> </td>
-                <td><a href="update.php?id=<?php echo $row['id']; ?>  " class = "btn btn-success">Update</a></td>
-                <td><a href="delete.php?id=<?php echo $row['id']; ?>" class = "btn btn-danger">Delete</a></td>
+                <td><a href="curd/update.php?id=<?php echo $row['id']; ?>  " class = "btn btn-success">Update</a></td>
+                <td><a href="curd/delete.php?id=<?php echo $row['id']; ?>" class = "btn btn-danger">Delete</a></td>
             </tr>
 
                 <?php
@@ -114,7 +115,7 @@
 
 <!-- Modal -->
 
-<form action="insert.php" method="post">
+<form action="curd/insert.php" method="post">
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -151,7 +152,7 @@
 
                <label for="age">Age</label>
 
-               <input type="text" name="age" class="form-control">
+               <input type="number" name="age" class="form-control">
                  </div>
         
 

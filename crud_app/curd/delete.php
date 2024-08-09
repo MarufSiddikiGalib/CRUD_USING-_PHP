@@ -1,7 +1,4 @@
-<?php include('dbcon.php');  ?>
-
-
-<?php 
+<?php include('../config/dbcon.php'); 
 
 function reorderAndReset($con) {
    
@@ -41,6 +38,6 @@ function reorderAndReset($con) {
 
      else{
         reorderAndReset($con); // Call the reorder and reset function after deletion
-        header("Location:index.php?delete_msg=Succesfully_deleted_the_data");  //dont forget it 
+        header("Location:../index.php?delete_msg=Succesfully_deleted_the_data");  //dont forget it 
   }
 ?>
